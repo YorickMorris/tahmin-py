@@ -15,7 +15,8 @@ secim = None
 for i in range(10):
     print(str(i + 1) + ". denemeniz : ")
     #secim = input()
-    secim=sys.argv[1]
+    secim=22
+    #secim=sys.argv[1]
     if(str(secim) == str(sayi)):
         print("Tebrikler dogru tahmin !")
         break
