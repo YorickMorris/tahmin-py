@@ -2,10 +2,10 @@ import random
 import sys
 import os
 
-workingdirectory=os.getcwd()
+#workingdirectory=os.getcwd()
 #Python method getcwd() returns current working directory of a process.
 #sys.argv() is an array for command line arguments in Python.
-print('Link: ',sys.argv[0])
+#print('Link: ',sys.argv[0])
 sayilar = range(0, 100)
 sayi = random.choice(sayilar)
 print(sayi)
