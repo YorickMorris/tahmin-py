@@ -1,1 +1,1 @@
-uvicorn tahmin:app --reload --port 5555
+web:uvicorn tahmin:app --host=0.0.0.0 --reload --port 5555
