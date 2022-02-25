@@ -26,6 +26,7 @@ def call(t:int):
 
 @app.post("/tahmin")
 def call1(b:dict=Body(...)):
+    global sayi
     sayi=b["sayi"]
     return b
 # for i in range(10):
