@@ -1,1 +1,1 @@
-web:uvicorn tahmin:app --host=0.0.0.0 --reload --port=${PORT:-5000}
+web: uvicorn tahmin:app --host=0.0.0.0 --reload --port=${PORT:-5000}
