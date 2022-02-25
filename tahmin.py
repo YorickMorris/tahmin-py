@@ -1,7 +1,8 @@
 import random
 import sys
 import os
-from fastapi import FastAPI
+from fastapi import FastAPI,Body
+
 #workingdirectory=os.getcwd()
 #Python method getcwd() returns current working directory of a process.
 #sys.argv() is an array for command line arguments in Python.
@@ -23,6 +24,10 @@ def call(t:int):
             "cevap":"yanlis"
         }
 
+@app.post("/tahmin")
+def call1(b:dict=Body(...)):
+    sayi=b["sayi"]
+    return b
 # for i in range(10):
 #     print(str(i + 1) + ". denemeniz : ")
 #     #secim = input()
