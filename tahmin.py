@@ -1,25 +1,36 @@
 import random
 import sys
 import os
-
+from fastapi import FastAPI
 #workingdirectory=os.getcwd()
 #Python method getcwd() returns current working directory of a process.
 #sys.argv() is an array for command line arguments in Python.
 #print('Link: ',sys.argv[0])
+app=FastAPI()
 sayilar = range(0, 100)
 sayi = random.choice(sayilar)
 print(sayi)
 secim = None
 
-
-for i in range(10):
-    print(str(i + 1) + ". denemeniz : ")
-    #secim = input()
-    secim=22
-    #secim=sys.argv[1]
-    if(str(secim) == str(sayi)):
-        print("Tebrikler dogru tahmin !")
-        break
-
+@app.get("/tahmin")
+def call(t:int):
+    if t==sayi:
+        return{
+            "cevap":"dogru"
+        }
     else:
-        print("Bilemediniz")
+        return{
+            "cevap":"yanlis"
+        }
+
+# for i in range(10):
+#     print(str(i + 1) + ". denemeniz : ")
+#     #secim = input()
+#     secim=22
+#     #secim=sys.argv[1]
+#     if(str(secim) == str(sayi)):
+#         print("Tebrikler dogru tahmin !")
+#         break
+
+#     else:
+#         print("Bilemediniz")
