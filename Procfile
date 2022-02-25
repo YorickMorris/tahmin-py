@@ -1,1 +1,1 @@
-web python tahmin.py
+uvicorn tahmin:app --reload --port 5555
